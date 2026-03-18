@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Adivinhação</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: white;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 100px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        #historico {
+            margin-top: 20px;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎯 Adivinhe o número (1 a 20)</h1>
+
+    <input type="number" id="inputNumero" placeholder="1-20">
+    
+    <br><br>
+
+    <button onclick="verificar()">Tentar</button>
+    <button onclick="reiniciar()">Reiniciar</button>
+
+    <p id="mensagem"></p>
+    <p id="tentativas"></p>
+
+    <h3>Histórico:</h3>
+    <ul id="historico"></ul>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
