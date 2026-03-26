@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Página Interativa - Exercício</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Página Interativa</h1>
+
+    <section class="controls" aria-labelledby="controls-heading">
+      <h2 id="controls-heading">Controles</h2>
+
+      <div class="counter-row">
+        <div class="counter-group" aria-live="polite">
+          <button id="btnInc" type="button">+ Incrementar</button>
+          <button id="btnDec" type="button">- Decrementar</button>
+          <span>Contador: <strong id="counterDisplay">0</strong></span>
+        </div>
+
+        <div>
+          <button id="btnReset" type="button">Resetar</button>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="inputText">Digite uma mensagem (pressione Enter para adicionar):</label>
+        <textarea id="inputText" placeholder="Escreva aqui..." rows="4" aria-describedby="charMeta"></textarea>
+        <div id="charMeta" class="meta">Caracteres (sem espaços): <span id="charCount">0</span></div>
+      </div>
+
+      <div class="add-item-group">
+        <label for="listType">Tipo de lista para adicionar itens:</label>
+        <select id="listType" aria-label="Tipo de lista">
+          <option value="ul">Lista não ordenada (&lt;ul&gt;)</option>
+          <option value="ol">Lista ordenada (&lt;ol&gt;)</option>
+        </select>
+        <button id="btnAddItem" type="button">Adicionar item</button>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="output" aria-labelledby="output-heading">
+      <h2 id="output-heading">Saída</h2>
+      <div id="messages" class="messages" aria-live="polite"></div>
+      <div id="listsContainer" class="lists"></div>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

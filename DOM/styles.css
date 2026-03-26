@@ -1,0 +1,106 @@
+:root{
+  --gap: 12px;
+  --max-width: 900px;
+  --accent: #0b5fff;
+  --muted: #666;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: Inter, system-ui, Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f9f9fb;
+  color: #111;
+}
+.container{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(12,20,40,0.06);
+}
+
+h1{margin-top:0}
+.controls{display:block; gap:var(--gap); margin-bottom: 16px}
+.counter-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--gap);
+  margin-bottom:var(--gap);
+}
+.counter-group button{
+  padding:8px 12px;
+  margin-right:6px;
+  border:1px solid #ddd;
+  background:#fff;
+  border-radius:6px;
+  cursor:pointer;
+}
+button:focus{outline:2px solid rgba(11,95,255,0.25)}
+#btnReset{background:#ffeef0; border-color:#ffccd5}
+.input-group{margin-bottom:var(--gap)}
+textarea{
+  width:100%;
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #ddd;
+  resize:vertical;
+  font-family:inherit;
+  font-size:0.95rem;
+}
+.meta{color:var(--muted); margin-top:6px}
+.add-item-group{display:flex; gap:8px; align-items:center; margin-top:8px}
+
+/* Messages (parágrafos adicionados) */
+.messages{margin-top:12px}
+.message{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  padding:8px 10px;
+  background:#f4f7ff;
+  border-radius:6px;
+  margin-bottom:8px;
+}
+.message p{margin:0; flex:1}
+
+/* Controls for each message */
+.msg-controls button{
+  margin-left:6px;
+  padding:4px 8px;
+  border-radius:6px;
+  border:1px solid #ddd;
+  background:#fff;
+  cursor:pointer;
+}
+
+/* Lists */
+.lists{margin-top:12px}
+ul,ol{
+  background:#fff;
+  padding:12px 18px;
+  border-radius:6px;
+  border:1px solid #eee;
+  margin-bottom:12px;
+}
+.lists li{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:6px 8px;
+  border-radius:4px;
+  margin-bottom:6px;
+  background:#fafafa;
+}
+.li-controls button{
+  margin-left:6px;
+  padding:4px 8px;
+  border-radius:6px;
+  border:1px solid #ddd;
+  background:#fff;
+  cursor:pointer;
+}
+small.hint{color:var(--muted)}
